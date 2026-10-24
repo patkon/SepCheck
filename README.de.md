@@ -28,7 +28,7 @@ und den Gesamtfarbauftrag messen. Überdrucken wird dabei berücksichtigt, so wi
 ## Bauen & installieren
 
 ```bash
-git clone https://github.com/<dein-user>/SepCheck.git
+git clone https://github.com/patkon/SepCheck.git
 cd SepCheck
 ./build-app.sh
 ```

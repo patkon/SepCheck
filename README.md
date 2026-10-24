@@ -29,7 +29,7 @@ would separate it.
 ## Build & install
 
 ```bash
-git clone https://github.com/<your-user>/SepCheck.git
+git clone https://github.com/patkon/SepCheck.git
 cd SepCheck
 ./build-app.sh
 ```
