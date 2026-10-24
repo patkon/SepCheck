@@ -1,0 +1,47 @@
+/* Deutsche Übersetzung – Schlüssel sind die englischen Texte im Quellcode */
+
+/* Fenster & Werkzeugleiste */
+"Open" = "Öffnen";
+"Open PDF (⌘O)" = "PDF öffnen (⌘O)";
+"Previous Page" = "Vorherige Seite";
+"Next Page" = "Nächste Seite";
+"Page %lld / %lld" = "Seite %lld / %lld";
+"Resolution" = "Auflösung";
+"Render resolution – higher = finer detail, slower" = "Render-Auflösung – höher = feinere Details, langsamer";
+
+/* Seitenleiste */
+"Process Colors" = "Prozessfarben";
+"Spot Colors (%lld)" = "Sonderfarben (%lld)";
+"No file open" = "Noch keine Datei geöffnet";
+"Show/hide" = "Ein-/ausblenden";
+"Show only this separation (key %lld)" = "Nur diesen Auszug zeigen (Taste %lld)";
+"Show only this separation" = "Nur diesen Auszug zeigen";
+"All" = "Alle";
+"Spots" = "Sonderf.";
+"Single Separation in Black" = "Einzelauszug in Schwarz";
+"Max. Ink Coverage" = "Max. Farbauftrag";
+"Under Pointer" = "Unter Zeiger";
+"Mark areas over limit in green" = "Flächen über Limit grün markieren";
+
+/* Arbeitsfläche */
+"Computing separations …" = "Auszüge werden berechnet …";
+"Drop PDF here" = "PDF hierher ziehen";
+"or open with ⌘O" = "oder mit ⌘O öffnen";
+"Fit" = "Einpassen";
+
+/* Menüs */
+"Open …" = "Öffnen …";
+"Separations" = "Auszüge";
+"Show All" = "Alle zeigen";
+"Only %@" = "Nur %@";
+"Separation %lld" = "Auszug %lld";
+"Process Colors Only" = "Nur Prozessfarben";
+"Spot Colors Only" = "Nur Sonderfarben";
+"Ink Coverage Warning" = "Farbauftrag-Warnung";
+"Page" = "Seite";
+
+/* Fehlermeldungen */
+"The file could not be opened as a PDF." = "Die Datei konnte nicht als PDF geöffnet werden.";
+"Ghostscript was not found.\nInstall it in Terminal with:  brew install ghostscript" = "Ghostscript wurde nicht gefunden.\nInstallieren im Terminal mit:  brew install ghostscript";
+"Ghostscript error:\n%@" = "Ghostscript-Fehler:\n%@";
+"Ghostscript did not produce any separations." = "Ghostscript hat keine Farbauszüge erzeugt.";
