@@ -60,6 +60,9 @@ Mac it was built on.
   separations, overprint and ink coverage, not a color-accurate soft proof.
 - Tone values apply at the selected render resolution. At 72 dpi, screens and fine lines are
   smoothed, so use 300 dpi for detail.
+- **No warranty:** SepCheck is a quick visual check, not a certified preflight tool, and all
+  values are provided without guarantee. Before sending files to print, verify anything critical
+  with an established tool such as Adobe Acrobat Pro (Output Preview, Preflight).
 
 ## Project structure
 

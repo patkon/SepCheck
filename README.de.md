@@ -59,6 +59,9 @@ Mac, auf dem sie gebaut wurde.
   Auszügen, Überdrucken und Farbauftrag gedacht, nicht als farbverbindlicher Softproof.
 - Tonwertangaben gelten bei der gewählten Render-Auflösung. Bei 72 dpi werden Raster und feine
   Linien geglättet, für Details 300 dpi wählen.
+- **Ohne Gewähr:** SepCheck ist eine schnelle Sichtkontrolle, kein zertifiziertes Preflight-Werkzeug,
+  alle Werte sind ohne Gewähr. Vor der Druckfreigabe Kritisches mit einem etablierten Werkzeug
+  prüfen, etwa Adobe Acrobat Pro (Ausgabevorschau, Preflight).
 
 ## Projektstruktur
 
