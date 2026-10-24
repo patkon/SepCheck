@@ -5,7 +5,7 @@ und den Gesamtfarbauftrag messen. Überdrucken wird dabei berücksichtigt, so wi
 
 🇬🇧 [English version](README.md)
 
-<!-- TODO: Screenshot -->
+![SepCheck mit allen Auszügen eines Beispiel-Etiketts](docs/overview-de.png)
 
 ## Funktionen
 
@@ -17,6 +17,10 @@ und den Gesamtfarbauftrag messen. Überdrucken wird dabei berücksichtigt, so wi
 - Einzelauszug in Schwarz, Kanäle solo schalten oder ausblenden, Zoom bis Druckgröße
 - Mehrseitige Dokumente, Drag & Drop, „Öffnen mit“ im Finder
 - Oberfläche auf Deutsch und Englisch (richtet sich nach der macOS-Sprache)
+
+| Eine Sonderfarbe als Einzelauszug | Flächen über dem Farbauftrags-Limit grün markiert |
+|---|---|
+| ![Nur der Auszug Metallic Gold](docs/spot-de.png) | ![Farbauftrag-Warnung](docs/ink-coverage-de.png) |
 
 ## Voraussetzungen
 
@@ -65,6 +69,7 @@ Resources/Info.plist     Bundle-Infos, PDF-Dokumenttyp
 Resources/*.lproj        Übersetzungen (Schlüssel = englische Texte im Code)
 Resources/icon-*.png     App-Icon (große Größen / vereinfacht 16–64 px)
 build-app.sh             Baut SepCheck.app
+docs/                    README-Screenshots, Beispiel-PDF (sample.ps = Quelle)
 ```
 
 ## Lizenz

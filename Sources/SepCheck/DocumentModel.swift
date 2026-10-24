@@ -65,6 +65,7 @@ final class DocumentModel: ObservableObject {
                 let added = names.subtracting(previous)
                 self.rendered = r
                 self.visible = previous.isEmpty ? names : keep.union(added)
+                if previous.isEmpty { self.applyScreenshotArguments() }
             case .failure(let e):
                 self.errorMessage = e.localizedDescription
             }
@@ -82,6 +83,16 @@ final class DocumentModel: ObservableObject {
             }.value
             if !Task.isCancelled { self.image = img }
         }
+    }
+
+    /// Versteckte Startparameter für die README-Screenshots, z. B.
+    /// `-ScreenshotSolo "Metallic Gold"`, `-ScreenshotTAC YES`
+    private func applyScreenshotArguments() {
+        let d = UserDefaults.standard
+        if let solo = d.string(forKey: "ScreenshotSolo"), channels.contains(where: { $0.name == solo }) {
+            visible = [solo]
+        }
+        if d.bool(forKey: "ScreenshotTAC") { tacWarning = true }
     }
 
     // MARK: - Kanalsteuerung

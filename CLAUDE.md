@@ -16,6 +16,9 @@ und Sonderfarben einzeln ansehen, Gesamtfarbauftrag messen und Überschreitungen
 - `swift build` zum Testen (ohne `.lproj`, also englisch), `./build-app.sh` erzeugt das signierte (ad hoc) `SepCheck.app` inkl. Icon.
 - Icons: `Resources/icon-1024.png` (ab 128 px), `Resources/icon-small.png` (bis 64 px).
 - Keine Sandbox (wird für den Ghostscript-Aufruf gebraucht).
+- README-Screenshots: `docs/sample.pdf` öffnen (Quelle `docs/sample.ps`, mit `gs -sDEVICE=pdfwrite` umwandeln),
+  Zustand per versteckten Startparametern `-ScreenshotSolo "<Kanal>"` / `-ScreenshotTAC YES`,
+  Sprache per `-AppleLanguages "(en)"`, Fenster mit `screencapture -l <WindowID> -o` aufnehmen, danach auf 1600 px verkleinern.
 
 ## Konventionen
 - Kommentare auf Deutsch.

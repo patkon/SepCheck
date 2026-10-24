@@ -1,0 +1,78 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 0 0 595 420
+%%Title: SepCheck sample label
+%%EndComments
+% Beispieldatei für die README-Screenshots: Prozessfarben, zwei Sonderfarben,
+% Überdrucken und eine Fläche mit zu hohem Gesamtfarbauftrag.
+
+<< /PageSize [595 420] >> setpagedevice
+
+/gold  [/Separation (Metallic Gold) /DeviceCMYK { dup 0 mul exch dup 0.25 mul exch dup 0.65 mul exch 0.15 mul }] def
+/die   [/Separation (Dieline)       /DeviceCMYK { dup 0 mul exch dup 1 mul exch dup 0 mul exch 0 mul }] def
+
+/rrect { % x y w h r  rrect  – abgerundetes Rechteck als Pfad
+  /r exch def /h exch def /w exch def /y exch def /x exch def
+  newpath
+  x r add y moveto
+  x w add y x w add y h add r arcto 4 {pop} repeat
+  x w add y h add x y h add r arcto 4 {pop} repeat
+  x y h add x y r arcto 4 {pop} repeat
+  x y x w add y r arcto 4 {pop} repeat
+  closepath
+} def
+
+% Hintergrund: Verlauf Creme -> Orange
+<< /ShadingType 2 /ColorSpace /DeviceCMYK /Coords [0 0 595 420] /Extend [true true]
+   /Function << /FunctionType 2 /Domain [0 1] /C0 [0.02 0.06 0.18 0] /C1 [0 0.55 0.85 0.05] /N 1 >>
+>> shfill
+
+% Ringe in Prozessfarben (Cyan-Abstufungen)
+gsave
+  420 250 translate
+  0 1 11 {
+    /i exch def
+    0.35 i 0.05 mul add 0.05 i 0.04 mul add 0.15 i 0.02 mul add i 0.03 mul setcmykcolor
+    newpath 0 0 150 i 11 mul sub 0 360 arc fill
+  } for
+grestore
+
+% Dunkles Band unten: 75/80/90/85 = 330 % Gesamtfarbauftrag (über dem Limit)
+0.75 0.80 0.90 0.85 setcmykcolor
+newpath 0 0 moveto 595 0 lineto 595 120 lineto 0 95 lineto closepath fill
+
+% Etwas sauberer: 60/60/60/80 = 260 %
+0.60 0.60 0.60 0.80 setcmykcolor
+newpath 0 95 moveto 595 120 lineto 595 128 lineto 0 103 lineto closepath fill
+
+% Goldkreis, überdruckend
+true setoverprint
+gold setcolorspace 1 setcolor
+newpath 175 250 105 0 360 arc fill
+false setoverprint
+% Goldener Schriftzug unten, aussparend
+/Helvetica-Bold findfont 30 scalefont setfont
+40 40 moveto (SINGLE ORIGIN \267 DARK ROAST) show
+
+% Text im Kreis: 100 % Schwarz, überdruckend
+true setoverprint
+0 0 0 1 setcmykcolor
+/Helvetica-Bold findfont 40 scalefont setfont
+103 256 moveto (KAFFEE) show
+/Helvetica findfont 18 scalefont setfont
+117 225 moveto (Roastery No. 7) show
+false setoverprint
+
+% Tiefschwarzer Text (aussparend): 60/40/40/100 = 240 %
+0.6 0.4 0.4 1 setcmykcolor
+/Helvetica-Bold findfont 22 scalefont setfont
+40 135 moveto (250 g  \267  Bio) show
+
+% Stanzkontur als Sonderfarbe, überdruckend
+true setoverprint
+die setcolorspace 1 setcolor
+1.5 setlinewidth
+12 12 571 396 28 rrect stroke
+false setoverprint
+
+showpage
+%%EOF

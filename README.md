@@ -6,7 +6,7 @@ would separate it.
 
 🇩🇪 [Deutsche Version](README.de.md)
 
-<!-- TODO: screenshot -->
+![SepCheck showing all separations of a sample label](docs/overview-en.png)
 
 ## Features
 
@@ -18,6 +18,10 @@ would separate it.
 - Single separation in black, solo/hide any channel, zoom up to actual print size
 - Multi-page documents, drag & drop, "Open With" from the Finder
 - UI in English and German (follows your macOS language)
+
+| A single spot color separation | Areas above the ink limit marked in green |
+|---|---|
+| ![Metallic Gold separation only](docs/spot-en.png) | ![Ink coverage warning](docs/ink-coverage-en.png) |
 
 ## Requirements
 
@@ -66,6 +70,7 @@ Resources/Info.plist     Bundle info, PDF document type
 Resources/*.lproj        Localizations (keys = English source strings)
 Resources/icon-*.png     App icon (large sizes / simplified 16–64 px)
 build-app.sh             Builds SepCheck.app
+docs/                    README screenshots, sample PDF (sample.ps = source)
 ```
 
 ### Adding a language
